@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- DEVICE MENU -->
+<div id="deviceMenu" class="screen">
+    <div class="menu-box">
+        <h1>🐍 SNAKE GAME</h1>
+        <p>SELECT YOUR DEVICE</p>
+
+        <button id="mobileBtn">📱 MOBILE</button>
+        <button id="pcBtn">💻 PC</button>
+    </div>
+</div>
+
+
+<!-- GAME SCREEN -->
+<div id="gameScreen" class="screen hidden">
+
+    <div class="top-bar">
+        <div class="score">
+            SCORE: <span id="score">0</span>
+        </div>
+
+        <div class="speed">
+            SPEED: <span id="speedText">1.00x</span>
+        </div>
+    </div>
+
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- MOBILE CONTROLS -->
+    <div id="mobileControls" class="mobile-controls hidden">
+
+        <button class="control up" data-direction="up">⬆</button>
+
+        <div class="middle-controls">
+            <button class="control" data-direction="left">⬅</button>
+            <button class="control" data-direction="down">⬇</button>
+            <button class="control" data-direction="right">➡</button>
+        </div>
+
+    </div>
+
+    <p id="controlText"></p>
+
+</div>
+
+
+<!-- GAME OVER SCREEN -->
+<div id="gameOverScreen" class="screen hidden">
+
+    <div class="game-over-box">
+
+        <h1>HOI NAKI VAI !!🤡</h1>
+
+        <p>GAME OVER</p>
+
+        <p>
+            YOUR SCORE:
+            <span id="finalScore">0</span>
+        </p>
+
+        <button id="restartBtn">🔄 PLAY AGAIN</button>
+        <button id="menuBtn">🏠 MAIN MENU</button>
+
+    </div>
+
+</div>
+
+
+<!-- AUDIO -->
+<audio id="scoreSound" src="agg.mp3" preload="auto"></audio>
+<audio id="moveSound" src="avai.mp3" preload="auto"></audio>
+<audio id="gameOverSound" src="hoinakivai.mp3" preload="auto"></audio>
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
